@@ -1,3 +1,6 @@
+[![Circle CI](https://circleci.com/gh/Ahalogy/guard-sunspot.svg?style=shield&svg)](https://circleci.com/gh/Ahalogy/guard-sunspot)
+[![Code Climate](https://codeclimate.com/github/Ahalogy/guard-sunspot/badges/gpa.svg)](https://codeclimate.com/github/Ahalogy/guard-sunspot)
+
 # Guard::Sunspot
 
 Guard::Sunspot allows you to automatically start and stop your solr
