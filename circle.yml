@@ -1,0 +1,4 @@
+database:
+  override:
+    - echo "No sunspot thanks."
+    # Do nothing. Sunspot is detected by CircleCI, so it tries to start it. We don't want that.
