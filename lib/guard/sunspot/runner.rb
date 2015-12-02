@@ -32,7 +32,7 @@ module Guard
       end
 
       def pid_file
-        @pid_file ||= File.expand_path( @root, 'solr', 'pids',
+        @pid_file ||= File.expand_path File.join( @root, 'solr', 'pids',
           options[:environment], "sunspot-solr-#{options[:environment]}.pid" )
       end
 
