@@ -3,6 +3,7 @@ require 'guard/sunspot/version'
 
 module Guard
   class Sunspot < Plugin
+    require 'guard/sunspot/runner'
     attr_reader :options, :runner
 
     DEFAULT_OPTIONS = {

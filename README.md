@@ -10,7 +10,7 @@ server.
 The simplest way to install Guard is to use [Bundler](http://gembundler.com/).
 Please make sure to have [Guard](https://github.com/guard/guard) installed before continue.
 
-Add Guard::Cucumber to your `Gemfile`:
+Add Guard::Sunspot to your `Gemfile`:
 
 ```ruby
 group :development do
@@ -18,7 +18,7 @@ group :development do
 end
 ```
 
-Add the default Guard::Cucumber template to your `Guardfile` by running:
+Add the default Guard::Sunspot template to your `Guardfile` by running:
 
 ```bash
 $ guard init sunspot

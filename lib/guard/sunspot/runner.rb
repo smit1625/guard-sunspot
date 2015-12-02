@@ -5,7 +5,7 @@ module Guard
 
       attr_reader :options, :pid
 
-      def initialize(options)
+      def initialize(options={})
         @options = options
         @root = options[:root] ? File.expand_path(options[:root]) : Dir.pwd
       end
