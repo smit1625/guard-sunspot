@@ -25,7 +25,9 @@ module Guard
         wait_for_no_pid
       end
 
-      def restart; stop; start end
+      def restart
+        UI.info '[Guard::Sunspot] Restart called!'
+        stop; start end
 
       def environment
         { 'RAILS_ENV' => options[:zeus] ? nil : options[:environment] }
@@ -50,8 +52,8 @@ module Guard
 
       def build_rake_command
         cmd = []
-        cmd << 'bundle exec' if @bundler
-        cmd << 'zeus' if @zeus
+        cmd << 'bundle exec' if options[:bundler]
+        cmd << 'zeus' if options[:zeus]
         cmd << 'rake'
         cmd.join ' '
       end
