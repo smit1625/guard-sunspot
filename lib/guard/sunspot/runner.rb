@@ -20,14 +20,12 @@ module Guard
       end
 
       def stop
-        return unless has_pid?
+        return unless pid_running?
         run_sunspot_command! 'stop'
         wait_for_no_pid
       end
 
-      def restart
-        UI.info '[Guard::Sunspot] Restart called!'
-        stop; start end
+      def restart; stop; start end
 
       def environment
         { 'RAILS_ENV' => options[:zeus] ? nil : options[:environment] }
@@ -76,6 +74,7 @@ module Guard
 
       def has_pid?; File.file? pid_file end
       def read_pid; Integer(File.read(pid_file)); rescue ArgumentError; nil end
+      def pid_running?; has_pid? && `ps -p #{pid} | wc -l`.strip.to_i > 1 end
 
       def wait_for_loop
         count = 0
